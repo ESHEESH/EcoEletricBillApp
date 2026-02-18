@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eco-Friendly Electric Bill App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+<h2>Electric Bill Calculator</h2>
+
+<form method="POST" action="process.php" onsubmit="return validateForm()">
+
+<input type="text" name="consumer_name" placeholder="Consumer Name" required>
+
+<input type="number" id="previous" name="previous_reading" placeholder="Previous Reading (kWh)" required>
+
+<input type="number" id="current" name="current_reading" placeholder="Current Reading (kWh)" required>
+
+<select name="customer_type" required>
+<option value="">Select Customer Type</option>
+<option value="Residential">Residential</option>
+<option value="Commercial">Commercial</option>
+</select>
+
+<div id="error" class="error"></div>
+
+<button type="submit">Calculate Bill</button>
+</form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
